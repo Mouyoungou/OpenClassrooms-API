@@ -14,13 +14,13 @@ val_set = pickle.load( open( "val_set.p", "rb" ) )
 
 @app.route('/')
 def home():
-    return 'Entrer une ID client dans la barre URL'
+    return 'Please enter a customer ID in the URL bar'
 
 @app.route('/<int:ID>/')
 def requet_ID(ID):
     
     if ID not in list(val_set['SK_ID_CURR']):
-        result = 'Ce client n\'est pas dans la base de donnée'
+        result = 'This customer is not in the database'
     else:
         val_set_ID=val_set[val_set['SK_ID_CURR']==int(ID)]
 
@@ -35,10 +35,10 @@ def requet_ID(ID):
    
    
         if y_Target == 0:
-           result=('ce client est solvable avec un taux de risque de '+ str(np.around(y_proba*100,2))+'%')
+           result=('This client is creditworthy with a risk rate of '+ str(np.around(y_proba*100,2))+'%')
 
         elif y_Target == 1:
-            result=('ce client est non solvable avec un taux de risque de '+ str(np.around(y_proba*100,2))+'%')
+            result=('This client is not creditworthy with a risk rate of '+ str(np.around(y_proba*100,2))+'%')
   
     return result
 
