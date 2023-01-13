@@ -1,8 +1,5 @@
 plotly==5.6.0
-<<<<<<< HEAD
-=======
 flask==2.2.2
->>>>>>> cb9fdcacfbc05596e7a451c4fbadd435cf3ef140
 imbalanced-learn==0.9.1
 lime==0.2.0.1
 matplotlib==3.5.1
@@ -14,7 +11,4 @@ streamlit==1.13.0
 shap==0.41.0
 seaborn==0.11.2
 lightgbm==3.3.3
-<<<<<<< HEAD
 flask==2.2.2
-=======
->>>>>>> cb9fdcacfbc05596e7a451c4fbadd435cf3ef140
