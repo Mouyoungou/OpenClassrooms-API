@@ -16,7 +16,7 @@ val_set = pickle.load( open( "val_set.p", "rb" ) )
 def home():
     return 'Please enter a customer ID in the URL bar'
 
-@app.route('/<int:ID>/', methods=['GET')
+@app.route('/<int:ID>/', methods=['GET']
 def requet_ID(ID):
     
     if ID not in list(val_set['SK_ID_CURR']):
