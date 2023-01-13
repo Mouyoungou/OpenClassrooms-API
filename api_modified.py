@@ -12,11 +12,11 @@ pred_model_banq2 = pickle.load( open( "pred_model_banq2.md", "rb" ) )
 val_set = pickle.load( open( "val_set.p", "rb" ) )
 #pred_frame=pd.read_csv('pred_frame.csv').drop('Unnamed: 0',axis=1)
 
-@app.route('/predict', methods=['GET']
+@app.route('/predict', methods=['GET'])
 def home():
     return 'Please enter a customer ID in the URL bar'
 
-@app.route('/<int:ID>/', methods=['GET']
+@app.route('/<int:ID>/', methods=['GET'])
 def requet_ID(ID):
     
     if ID not in list(val_set['SK_ID_CURR']):
