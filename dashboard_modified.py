@@ -267,7 +267,7 @@ def profil_client(ID,frame_True):
   genre_c_t=info_client_t['CODE_GENDER'].item()
   region_c_t=info_client_t['REGION_RATING_CLIENT'].item()
   arr_cl=[]
-  #arr_cl.append(ID_c)
+  arr_cl.append(ID_c)
   arr_cl.append(age_c_t)
   arr_cl.append(genre_c_t)
   arr_cl.append(enfant_c_t)
