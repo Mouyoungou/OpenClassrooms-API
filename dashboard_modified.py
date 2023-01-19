@@ -267,14 +267,14 @@ def profil_client(ID,frame_True):
   genre_c_t=info_client_t['CODE_GENDER'].item()
   region_c_t=info_client_t['REGION_RATING_CLIENT'].item()
   arr_cl=[]
-  arr_cl.append(ID_c)
+  #arr_cl.append(ID_c)
   arr_cl.append(age_c_t)
   arr_cl.append(genre_c_t)
   arr_cl.append(enfant_c_t)
   arr_cl.append(region_c_t)
   frame_info_client=pd.DataFrame(arr_cl)
   frame_info_client=frame_info_client.T
-  frame_info_client.columns=['AGE','GENRE','ENFANT','CODE_REGION']
+  frame_info_client.columns=['AGE','CODE_GENDER','CNT_CHILDREN','REGION_RATING_CLIENT']
   frame_info_client.index=[str(ID_c)]
   return frame_info_client.T
 
@@ -301,7 +301,7 @@ def plot_shap(ID):
 
 #######
 #Appel de l'API : 
-    API_url = "http://127.0.0.1:5000/credit/" + str(identifiant)
+    API_url = "http://127.0.0.1:5000/" + str(id_input)
 
     with st.spinner('Please enter a customer ID in the URL bar...'):
         json_url = urlopen(API_url)
