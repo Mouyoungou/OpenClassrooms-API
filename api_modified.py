@@ -10,7 +10,6 @@ app = Flask(__name__)
 
 pred_model_banq2 = pickle.load( open( "pred_model_banq2.md", "rb" ) )
 val_set = pickle.load( open( "val_set.p", "rb" ) )
-#pred_frame=pd.read_csv('pred_frame.csv').drop('Unnamed: 0',axis=1)
 
 @app.route('/predict', methods=['GET'])
 def home():

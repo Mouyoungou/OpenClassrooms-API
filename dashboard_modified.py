@@ -285,7 +285,6 @@ def st_shap(plot, height=None):
 
 def plot_shap(ID):
     ID_client=int(ID)
-    
     X_ID=pred_frame_dash_s1000[pred_frame_dash_s1000['SK_ID_CURR']==ID_client].copy()
     X_ID=X_ID.reset_index(drop=True)
     X=X_ID.drop(['SK_ID_CURR','Proba', 'TARGET','PREDICTION'],axis=1)
@@ -328,7 +327,7 @@ else:
         elif option == 'Individual':
             st.sidebar.subheader('Customer profile '+ str(id_input))
             st.sidebar.write(profil_client(id_input,set_tru_data))
-            st.write(plot_shap(id_input,set_shap,pred_frame_dash_s1000))
+            st.write(plot_shap(id_input))
             
         elif option == 'Similar profiles':
             st.sidebar.subheader('Customer profile '+ str(id_input))
