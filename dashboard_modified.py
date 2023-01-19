@@ -328,7 +328,7 @@ else:
         elif option == 'Individual':
             st.sidebar.subheader('Customer profile '+ str(id_input))
             st.sidebar.write(profil_client(id_input,set_tru_data))
-            st.write(plot_shap(id_input))
+            st.write(plot_shap(id_input,set_shap,pred_frame_dash_s1000))
             
         elif option == 'Similar profiles':
             st.sidebar.subheader('Customer profile '+ str(id_input))
