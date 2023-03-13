@@ -13,7 +13,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from lightgbm import LGBMClassifier
 import time
-
+from urllib.request import urlopen
+import json
 
 #Chargement des dataset
 shap_values = pickle.load( open( "shap_values.p", "rb" ) )
