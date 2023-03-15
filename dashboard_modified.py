@@ -16,6 +16,7 @@ import time
 from urllib.request import urlopen
 import json
 
+
 #Chargement des dataset
 shap_values = pickle.load( open( "shap_values.p", "rb" ) )
 set_shap = pickle.load( open( "set_shap.p", "rb" ) )
